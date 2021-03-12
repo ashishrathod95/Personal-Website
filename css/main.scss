@@ -26,6 +26,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background-color: map-get($colors , bg-color);
+  font-family: 'Raleway', sans-serif;
 }
 
 * {
@@ -151,16 +152,6 @@ img {
   animation: topBounce 3s ease-in-out infinite;
 }
 
-// .effect-3 {
-//   height: 180px;
-//   width: 180px;
-//   border: 20px solid map-get($colors, primary );
-//   border-radius: 50%;
-//   left: 50%;
-//   top: -120px;
-//   animation: leftBounce 3s ease-in-out infinite;
-// }
-
 .effect-4 {
   border-top: 30px solid transparent;
   border-left: 30px solid #1fc586;
@@ -222,6 +213,31 @@ img {
   }
   50% {
     transform: translateX(45px);
+  }
+}
+
+.section-title {
+  padding: 0 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: map-get($colors, text-black );
+  }
+  
+  h2::before {
+    content: attr(data-heading);
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: map-get($colors , primary);
   }
 }
 
@@ -424,5 +440,57 @@ img {
     border-radius: 50%;
     border: 10px solid transparent;
   }
+}
 
+// ***************************************** About Section  ****************************************
+.about-section {
+  padding: 80px 0 80px;
+  min-height: 100vh;
+  
+  .about-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 15px;
+  }
+  .img-box {
+    padding: 10px 15px;
+  }
+  .img-box img {
+    width: 100%;
+    border: 10px solid transparent;
+  }
+  .social-links {
+    margin: 12px 0px;
+    text-align: center;
+  }
+  .social-links a {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 25px;
+    color: map-get($colors, text-black);
+    margin: 2px 4px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .social-links a:hover {
+    color: map-get($colors, primary );
+  }
+  .about-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 15px;
+  }
+  .about-info p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    color: map-get($colors , text-black);
+  }
+  .about-info span {
+    font-weight: 600;
+  }
+  .about-info .more-btn {
+    margin: 30px 20px 0 0;
+  }
 }
