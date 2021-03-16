@@ -216,6 +216,17 @@ img {
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .section-title {
   padding: 0 15px;
   flex: 0 0 100%;
@@ -523,6 +534,11 @@ img {
   .tab-content {
     flex: 0 0 100%;
     max-width: 100%;
+    display: none;
+  }
+  .tab-content.active{
+    display: block;
+    animation: fadeIn 0.3s ease-in;
   }
   .skills {
     padding: 0 0 50px;
@@ -563,7 +579,7 @@ img {
   }
 }
 
-.experience {
+.experience , .education{
   padding-bottom: 80px;
 }
 .timeline {
